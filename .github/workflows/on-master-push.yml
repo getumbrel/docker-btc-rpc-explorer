@@ -37,9 +37,5 @@ jobs:
           docker buildx build \
           --platform linux/amd64,linux/arm64,linux/arm/v7 \
           --build-arg VERSION=$VERSION \
-          --load \
           --tag ${{ secrets.DOCKER_HUB_USER }}/btc-rpc-explorer:$VERSION \
-          .
-
-      - name: List images
-        run: docker images ${{ secrets.DOCKER_HUB_USER }}/btc-rpc-explorer
+          --output "type=registry" .
