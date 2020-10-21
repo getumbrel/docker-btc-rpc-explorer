@@ -40,5 +40,5 @@ jobs:
           --tag ${{ secrets.DOCKER_HUB_USER }}/btc-rpc-explorer:$VERSION \
           .
 
-      - name: List Docker images
-        run: docker images
+      - name: List images
+        run: docker images ${{ secrets.DOCKER_HUB_USER }}/btc-rpc-explorer
