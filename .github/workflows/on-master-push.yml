@@ -39,3 +39,6 @@ jobs:
           --build-arg VERSION=$VERSION \
           --tag ${{ secrets.DOCKER_HUB_USER }}/btc-rpc-explorer:$VERSION \
           --output "type=registry" .
+
+      - name: List Docker images
+        run: docker images
