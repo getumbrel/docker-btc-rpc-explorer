@@ -16,6 +16,10 @@ RUN npm ci --production
 
 USER 1000
 
+WORKDIR /data
+
+COPY --from=builder /build .
+
 EXPOSE 3002
 
 CMD [ "npm", "start" ]
