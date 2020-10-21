@@ -8,7 +8,7 @@ WORKDIR /build
 
 RUN apt-get update
 
-RUN apt-get install -y git
+RUN apt-get install -y git python3 build-essential
 
 RUN git clone --branch $VERSION https://github.com/janoside/btc-rpc-explorer .
 
