@@ -14,6 +14,10 @@ RUN git clone --branch $VERSION https://github.com/janoside/btc-rpc-explorer .
 
 RUN npm ci --production
 
+RUN rm -rf .git
+
+FROM node:12-buster-slim
+
 USER 1000
 
 WORKDIR /data
