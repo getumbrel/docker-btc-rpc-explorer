@@ -1,4 +1,4 @@
-ARG VERSION=v2.1.0
+ARG VERSION=v2.2.0
 
 FROM node:12-buster-slim AS builder
 
