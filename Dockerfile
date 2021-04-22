@@ -12,6 +12,10 @@ RUN apt-get install -y git python3 build-essential
 
 RUN git clone --branch $VERSION https://github.com/janoside/btc-rpc-explorer .
 
+# Make sure we can pull git npm dependencies
+RUN git config --global url."https://github.com/".insteadOf git@github.com:
+RUN git config --global url."https://".insteadOf ssh://
+
 RUN npm ci --production
 
 RUN rm -rf .git
