@@ -1,6 +1,6 @@
-ARG VERSION=v3.3.0
+ARG VERSION=v3.4.0
 
-FROM node:12-buster-slim AS builder
+FROM node:16-buster-slim AS builder
 
 ARG VERSION
 
@@ -20,7 +20,7 @@ RUN npm ci --production
 
 RUN rm -rf .git
 
-FROM node:12-buster-slim
+FROM node:16-buster-slim
 
 USER 1000
 
