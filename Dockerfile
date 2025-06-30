@@ -1,6 +1,6 @@
 ARG VERSION=v3.5.0
 
-FROM node:20-buster-slim AS builder
+FROM node:20-bookworm-slim AS builder
 
 ARG VERSION
 
@@ -20,7 +20,7 @@ RUN npm ci --production
 
 RUN rm -rf .git
 
-FROM node:20-buster-slim
+FROM node:20-bookworm-slim
 
 USER 1000
 
