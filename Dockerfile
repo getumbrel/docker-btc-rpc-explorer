@@ -1,4 +1,4 @@
-ARG VERSION=v3.5.0
+ARG VERSION=v3.5.1
 
 FROM node:20-bookworm-slim AS builder
 
